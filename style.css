@@ -66,18 +66,10 @@ a {
   margin-top: 10px;
   cursor: pointer;
   height: fit-content;
+  width: fit-content;
   max-width: 300px;
   min-height: 200px;
   transition: transform 0.6s;
-}
-
-.card-sub {
-  padding: 2.5% !important;
-  margin-right: 20px;
-  margin-top: 10px;
-  padding-bottom: 0;
-  height: fit-content;
-  min-height: 220px !important;
 }
 
 a {
