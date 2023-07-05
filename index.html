@@ -43,28 +43,7 @@
 
     <section>
         <h2>Our Projects</h2>
-        <div class="cards carousel" style="overflow-x: scroll; flex-wrap: nowrap !important;">
-            <a href="/Data-Vis/" class="card" style="min-height: 220px;">
-                <img src="https://th.bing.com/th/id/OIP.lRRhG2ZEtFpRLg3SBtJ2IAHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                    width="200px">
-                <div class="card-title">Data Visualisation</div>
-                <div class="card-subtitle">A minimalistic website for generating quick diagrams or graphs of your datasets.</div>
-            </a>
-
-            <a href="/Arduino-Matrix-Helper/" class="card" style="min-height: 220px;">
-                <img src="https://th.bing.com/th/id/OIP.lRRhG2ZEtFpRLg3SBtJ2IAHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                    width="200px">
-                <div class="card-title">LED Matrix Code Generator</div>
-                <div class="card-subtitle">Used for generating code for 8x8 arduino LED Matrix.</div>
-            </a>
-
-            <a href="https://github.com/Zeply-Studios/Private-Chats" class="card" style="min-height: 220px;">
-                <img src="https://th.bing.com/th/id/OIP.lRRhG2ZEtFpRLg3SBtJ2IAHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                    width="200px">
-                <div class="card-title">Private Chats</div>
-                <div class="card-subtitle">Private Chat System with account logins, chat creation and instant messaging.
-                </div>
-            </a>
+        <div id="carousel" class="cards carousel" style="overflow-x: scroll; flex-wrap: nowrap !important;">
         </div>
     </section>
 
@@ -73,6 +52,47 @@
         <p><a href="https://github.com/Zeply-Studios">Github</a></p>
         <p><a href="https://github.com/Zeply-Studios">Github</a></p>
     </footer>
+
+    <script>
+        const container = document.getElementById("carousel");
+    
+        fetch("/data.json").then(async res => {
+            const items = await res.json();
+            console.log(items);
+    
+            for (const item of items) {
+                const card = document.createElement("a");
+    
+                card.className = "card";
+                card.href = item.link;
+                card.style.minHeight = "250px";
+    
+                const img = document.createElement("img");
+                img.src = item.img;
+                img.width = 200;
+                img.alt = "Img"
+    
+                const title = document.createElement("p");
+                title.className = "card-title";
+                title.textContent = item.title;
+    
+                const subtitle = document.createElement("p"); 
+                subtitle.className = "card-subtitle";
+                subtitle.textContent = item.subtitle;
+    
+                const tag = document.createElement("p");
+                tag.className = "card-tag";
+                tag.textContent = item.tag;
+    
+                card.appendChild(img);
+                card.appendChild(title);
+                card.appendChild(subtitle);
+                card.appendChild(tag);
+    
+                container.appendChild(card);
+            }
+        })
+    </script>
 </body>
 
 </html>
