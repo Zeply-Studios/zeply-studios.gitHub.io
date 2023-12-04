@@ -12,12 +12,5 @@
         "subtitle": "Used for generating code for 8x8 or 16x16 arduino LED Matrix.",
         "tag": "WEB",
         "link": "/Arduino-Matrix-Helper/"
-    },
-    {
-        "img": "https://th.bing.com/th/id/OIP.lRRhG2ZEtFpRLg3SBtJ2IAHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
-        "title": "Private Chats",
-        "subtitle": "POC Instant messaging system made with ExpressJS & SocketIO in 4 hours.",
-        "tag": "WEB",
-        "link": "https://github.com/Zeply-Studios/Private-Chats"
     }
 ]
