@@ -1,6 +1,13 @@
 [
     {
         "img": "https://th.bing.com/th/id/OIP.lRRhG2ZEtFpRLg3SBtJ2IAHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+        "title": "Server Deployment Manager",
+        "subtitle": "A server deployment manager for Minecraft, using Kubernetes and Redis.",
+        "tag": "KUBERNETES",
+        "link": "/Server-Deployment-Manager.html"
+    },
+    {
+        "img": "https://th.bing.com/th/id/OIP.lRRhG2ZEtFpRLg3SBtJ2IAHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
         "title": "Data Visualisation",
         "subtitle": "A minimalistic website for generating quick diagrams or graphs of your datasets.",
         "tag": "WEB",
